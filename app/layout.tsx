@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { DotPattern } from "@/components/magicui/dot-pattern";
+import { Header } from "@/components/header";
+import { cn } from "@/lib/utils";
+import { Meteors } from "@/components/magicui/meteors";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +27,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        {children}
+        <div className="relative flex h-screen  w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background">
+          <Meteors />
+
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(1200px_circle_at_center,white,transparent)]",
+            )}
+          />
+
+          {children}
+          <Header />
+        </div>
       </body>
     </html>
   );
