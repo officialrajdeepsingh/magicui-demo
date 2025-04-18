@@ -4,6 +4,7 @@ import React from "react";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { Home, Settings, Search, Contact } from "lucide-react";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export function Header() {
   return (
@@ -20,6 +21,7 @@ export function Header() {
       <DockIcon>
         <Search className="size-5" />
       </DockIcon>
+      <ThemeSwitcher />
     </Dock>
   );
 }
