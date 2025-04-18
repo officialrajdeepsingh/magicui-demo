@@ -46,7 +46,7 @@ export default function Home() {
           avatarUrls={avatars}
         />
         <div className="max-w-md mx-auto flex justify-around">
-          <InteractiveHoverButton className="h-12 w-36 rounded-full">
+          <InteractiveHoverButton className="h-12 w-36 rounded-full bg-background text-foreground">
             Get Started
           </InteractiveHoverButton>
           <ShimmerButton className="h-12">Watch Demo</ShimmerButton>
