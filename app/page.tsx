@@ -29,6 +29,7 @@ const avatars = [
     profileUrl: "https://github.com/itsarghyadas",
   },
 ];
+
 export default function Home() {
   return (
     <div className="mx-auto container px-5 py-10 md:px-10 ">
